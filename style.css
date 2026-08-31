@@ -1,0 +1,1894 @@
+/* ========================================
+   基本設定
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        sans-serif;
+
+    background: #faf8f6;
+
+    color: #4a4643;
+
+    line-height: 1.8;
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+.site-header {
+
+    text-align: center;
+
+    padding:
+        42px 20px 28px;
+
+    background:
+        #fffdfb;
+
+    border-bottom:
+        1px solid #eee7e2;
+}
+
+
+.site-title {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        0.35em;
+
+    color:
+        #9b8982;
+
+    margin-bottom:
+        14px;
+}
+
+
+.couple-name {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        34px;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        #3f3a37;
+}
+
+
+.wedding-date {
+
+    margin-top:
+        8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        0.2em;
+
+    color:
+        #9b8982;
+}
+
+
+/* ========================================
+   タブメニュー
+======================================== */
+
+.tab-menu {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    background:
+        rgba(
+            255,
+            253,
+            251,
+            0.96
+        );
+
+    border-bottom:
+        1px solid #e8e0db;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+}
+
+
+.tab-button {
+
+    appearance:
+        none;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    padding:
+        14px 2px 12px;
+
+    color:
+        #8d817b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        0.05em;
+
+    cursor:
+        pointer;
+
+    position:
+        relative;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.tab-button::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        20%;
+
+    right:
+        20%;
+
+    bottom:
+        0;
+
+    height:
+        2px;
+
+    background:
+        #b99a91;
+
+    transform:
+        scaleX(0);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.tab-button.active {
+
+    color:
+        #655752;
+}
+
+
+.tab-button.active::after {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* ========================================
+   タブコンテンツ
+======================================== */
+
+.tab-content {
+
+    display:
+        none;
+
+    min-height:
+        calc(100vh - 150px);
+}
+
+
+.tab-content.active {
+
+    display:
+        block;
+}
+
+
+/* ========================================
+   Home
+======================================== */
+
+#home {
+
+    background:
+
+        linear-gradient(
+            rgba(
+                255,
+                253,
+                251,
+                0.82
+            ),
+            rgba(
+                255,
+                253,
+                251,
+                0.92
+            )
+        ),
+
+        url("photos/home.jpg")
+
+        center / cover no-repeat;
+}
+
+
+.home-content {
+
+    max-width:
+        620px;
+
+    margin:
+        0 auto;
+
+    min-height:
+        calc(100vh - 150px);
+
+    padding:
+        80px 25px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.english-title {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        15px;
+
+    letter-spacing:
+        0.35em;
+
+    color:
+        #a48e86;
+
+    margin-bottom:
+        28px;
+}
+
+
+.home-content h1 {
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        23px;
+
+    line-height:
+        2;
+
+    font-weight:
+        normal;
+
+    color:
+        #494340;
+
+    margin-bottom:
+        30px;
+}
+
+
+.home-message {
+
+    max-width:
+        480px;
+
+    font-size:
+        14px;
+
+    line-height:
+        2.2;
+
+    color:
+        #756b66;
+}
+
+
+.home-names {
+
+    margin-top:
+        45px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        25px;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        #554c48;
+}
+
+
+.home-names span {
+
+    margin:
+        0 12px;
+
+    color:
+        #b99a91;
+}
+
+
+.home-date {
+
+    margin-top:
+        10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        0.2em;
+
+    color:
+        #9b8982;
+}
+
+
+/* ========================================
+   共通セクション
+======================================== */
+
+.section-inner {
+
+    width:
+        100%;
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto;
+
+    padding:
+        70px 20px 100px;
+}
+
+
+.section-label {
+
+    text-align:
+        center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        0.3em;
+
+    color:
+        #ad958d;
+
+    margin-bottom:
+        8px;
+}
+
+
+.section-inner > h2 {
+
+    text-align:
+        center;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        28px;
+
+    font-weight:
+        normal;
+
+    color:
+        #4a4441;
+
+    margin-bottom:
+        50px;
+}
+
+
+/* ========================================
+   Bride / Groom
+======================================== */
+
+.profile-placeholder {
+
+    text-align:
+        center;
+
+    background:
+        #fffdfb;
+
+    padding:
+        30px 20px 40px;
+
+    border:
+        1px solid #eee6e1;
+
+    box-shadow:
+        0 8px 30px
+        rgba(
+            80,
+            60,
+            50,
+            0.05
+        );
+}
+
+
+.profile-photo {
+
+    width:
+        190px;
+
+    height:
+        240px;
+
+    margin:
+        0 auto 28px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    background:
+        #eee8e4;
+
+    color:
+        #9b8d87;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        0.15em;
+}
+
+
+.profile-placeholder h3 {
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        23px;
+
+    font-weight:
+        normal;
+
+    margin-bottom:
+        15px;
+
+    color:
+        #514945;
+}
+
+
+.profile-placeholder p {
+
+    font-size:
+        14px;
+
+    color:
+        #776e69;
+}
+
+
+.profile-photo img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+}
+
+
+/* ========================================
+   Family
+======================================== */
+
+.family-section {
+
+    margin-bottom:
+        65px;
+
+    text-align:
+        center;
+}
+
+
+.family-section h3 {
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        21px;
+
+    font-weight:
+        normal;
+
+    margin-bottom:
+        22px;
+
+    color:
+        #554d49;
+}
+
+
+.family-photo {
+
+    width:
+        100%;
+
+    max-width:
+        600px;
+
+    margin:
+        0 auto 20px;
+
+    display:
+        block;
+}
+
+
+.family-photo img {
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    display:
+        block;
+
+    object-fit:
+        contain;
+}
+
+
+.family-section p {
+
+    max-width:
+        550px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        14px;
+
+    color:
+        #756c67;
+}
+
+
+/* ========================================
+   Story
+======================================== */
+
+#photo-story {
+
+    width:
+        100%;
+}
+
+
+/* ========================================
+   イベント
+======================================== */
+
+.photo-event {
+
+    margin-bottom:
+        60px;
+
+    padding-bottom:
+        45px;
+
+    border-bottom:
+        1px solid #eee5e0;
+}
+
+
+.photo-event:last-child {
+
+    border-bottom:
+        none;
+
+    margin-bottom:
+        0;
+}
+
+
+/* ========================================
+   日付
+======================================== */
+
+.photo-event-date {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        6px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        0.25em;
+
+    color:
+        #a58b82;
+}
+
+
+/* ========================================
+   イベントタイトル
+======================================== */
+
+.photo-event-title {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        20px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        21px;
+
+    font-weight:
+        normal;
+
+    color:
+        #514945;
+}
+
+
+/* ========================================
+   代表写真
+======================================== */
+
+.photo-event-photo {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto 18px;
+
+    /*
+       回転した写真が
+       文章に重ならないようにする
+    */
+
+    overflow:
+        visible;
+}
+
+
+.photo-event-photo img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    max-height:
+        520px;
+
+    object-fit:
+        contain;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 8px 30px
+        rgba(
+            80,
+            60,
+            50,
+            0.08
+        );
+
+    transform-origin:
+        center center;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/*
+   重要
+
+   以前のCSSでは :active に
+   transform: scale(0.99) がありました。
+
+   回転と同時に使うと
+   rotate() が上書きされてしまうので、
+   scaleは使わずopacityだけ変更します。
+*/
+
+.photo-event-photo img:active {
+
+    opacity:
+        0.8;
+
+}
+
+
+/* ========================================
+   回転写真
+======================================== */
+
+.photo-event-photo.rotated-photo {
+
+    overflow:
+        visible;
+}
+
+
+.photo-event-photo.rotated-photo img {
+
+    transform-origin:
+        center center;
+}
+
+
+/* ========================================
+   写真枚数
+======================================== */
+
+.photo-event-count {
+
+    position:
+        absolute;
+
+    right:
+        10px;
+
+    bottom:
+        10px;
+
+    padding:
+        5px 10px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(
+            40,
+            35,
+            32,
+            0.68
+        );
+
+    color:
+        white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        0.05em;
+
+    pointer-events:
+        none;
+}
+
+
+/* ========================================
+   イベント文章
+======================================== */
+
+.photo-event-text {
+
+    max-width:
+        580px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        14px;
+
+    line-height:
+        2.1;
+
+    color:
+        #756c67;
+
+    text-align:
+        left;
+}
+
+
+/* ========================================
+   写真がない場合
+======================================== */
+
+.photo-story-empty {
+
+    text-align:
+        center;
+
+    padding:
+        50px 20px;
+
+    color:
+        #999;
+}
+
+
+/* ========================================
+   ライトボックス
+======================================== */
+
+.lightbox {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        9999;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        15px;
+
+    background:
+        rgba(
+            25,
+            22,
+            20,
+            0.95
+        );
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+.lightbox.active {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+}
+
+
+.lightbox img {
+
+    max-width:
+        100%;
+
+    max-height:
+        85vh;
+
+    width:
+        auto;
+
+    height:
+        auto;
+
+    object-fit:
+        contain;
+
+    user-select:
+        none;
+
+    -webkit-user-drag:
+        none;
+
+    transform-origin:
+        center center;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* ========================================
+   ライトボックス 閉じる
+======================================== */
+
+.lightbox-close {
+
+    position:
+        absolute;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    color:
+        white;
+
+    font-size:
+        30px;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    z-index:
+        10;
+}
+
+
+/* ========================================
+   ライトボックス 左右ボタン
+======================================== */
+
+.lightbox-arrow {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    width:
+        42px;
+
+    height:
+        65px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-size:
+        42px;
+
+    cursor:
+        pointer;
+
+    z-index:
+        10;
+}
+
+
+.lightbox-prev {
+
+    left:
+        0;
+}
+
+
+.lightbox-next {
+
+    right:
+        0;
+}
+
+
+/* ========================================
+   フッター
+======================================== */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        35px 20px 50px;
+
+    border-top:
+        1px solid #e8e0db;
+
+    background:
+        #fffdfb;
+
+    color:
+        #a09590;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+footer p + p {
+
+    margin-top:
+        5px;
+}
+
+
+/* ========================================
+   PC表示
+======================================== */
+
+@media (min-width: 701px) {
+
+    .tab-button {
+
+        font-size:
+            12px;
+
+        padding:
+            16px 5px 14px;
+    }
+
+
+    .profile-placeholder {
+
+        padding:
+            45px;
+    }
+
+
+    .photo-event {
+
+        margin-bottom:
+            80px;
+
+        padding-bottom:
+            60px;
+    }
+
+
+    .photo-event-title {
+
+        font-size:
+            23px;
+
+        margin-bottom:
+            25px;
+    }
+
+
+    .photo-event-photo img {
+
+        max-height:
+            600px;
+    }
+
+
+    .photo-event-text {
+
+        font-size:
+            15px;
+    }
+
+}
+
+
+/* ========================================
+   小さいスマホ
+======================================== */
+
+@media (max-width: 380px) {
+
+    .site-header {
+
+        padding:
+            32px 15px 22px;
+    }
+
+
+    .couple-name {
+
+        font-size:
+            29px;
+    }
+
+
+    .tab-button {
+
+        font-size:
+            10px;
+
+        padding:
+            12px 0 10px;
+    }
+
+
+    .home-content {
+
+        padding:
+            60px 18px;
+    }
+
+
+    .home-content h1 {
+
+        font-size:
+            20px;
+    }
+
+
+    .home-message {
+
+        font-size:
+            13px;
+    }
+
+
+    .section-inner {
+
+        padding:
+            55px 15px 80px;
+    }
+
+
+    .section-inner > h2 {
+
+        font-size:
+            25px;
+
+        margin-bottom:
+            40px;
+    }
+
+
+    .photo-event {
+
+        margin-bottom:
+            50px;
+
+        padding-bottom:
+            40px;
+    }
+
+
+    .photo-event-date {
+
+        font-size:
+            12px;
+    }
+
+
+    .photo-event-title {
+
+        font-size:
+            19px;
+
+        margin-bottom:
+            18px;
+    }
+
+
+    .photo-event-photo {
+
+        margin-bottom:
+            16px;
+    }
+
+
+    .photo-event-photo img {
+
+        max-height:
+            450px;
+    }
+
+
+    .photo-event-count {
+
+        right:
+            7px;
+
+        bottom:
+            7px;
+
+        padding:
+            4px 8px;
+
+        font-size:
+            10px;
+    }
+
+
+    .photo-event-text {
+
+        font-size:
+            13px;
+
+        line-height:
+            2;
+    }
+
+}
+
+
+/* ========================================
+   Groom / Bride 詳細プロフィール
+======================================== */
+
+.person-section {
+
+    margin-top:
+        60px;
+
+    padding:
+        35px 25px 40px;
+
+    background:
+        #fffdfb;
+
+    border:
+        1px solid #eee6e1;
+
+    box-shadow:
+        0 8px 30px
+        rgba(
+            80,
+            60,
+            50,
+            0.04
+        );
+}
+
+
+/* ========================================
+   PROFILE / HISTORY / PARTNER タイトル
+======================================== */
+
+.person-section-title {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        normal;
+
+    letter-spacing:
+        0.3em;
+
+    color:
+        #ad958d;
+}
+
+
+/* ========================================
+   プロフィール
+======================================== */
+
+.profile-list {
+
+    list-style:
+        none;
+
+    max-width:
+        500px;
+
+    margin:
+        0 auto;
+}
+
+
+.profile-list li {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        13px 5px;
+
+    border-bottom:
+        1px solid #eee7e2;
+
+    font-size:
+        14px;
+
+    color:
+        #756c67;
+}
+
+
+.profile-list li:last-child {
+
+    border-bottom:
+        none;
+}
+
+
+.profile-list li span {
+
+    width:
+        90px;
+
+    flex-shrink:
+        0;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    color:
+        #554d49;
+
+    font-size:
+        14px;
+}
+
+
+/* ========================================
+   HISTORY
+======================================== */
+
+.history {
+
+    max-width:
+        570px;
+
+    margin:
+        0 auto;
+
+    position:
+        relative;
+
+    padding-left:
+        28px;
+}
+
+
+/* ========================================
+   HISTORY 縦線
+======================================== */
+
+.history::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        5px;
+
+    bottom:
+        5px;
+
+    left:
+        6px;
+
+    width:
+        1px;
+
+    background:
+        #ded2cc;
+}
+
+
+/* ========================================
+   HISTORY 各項目
+======================================== */
+
+.history-item {
+
+    position:
+        relative;
+
+    margin-bottom:
+        35px;
+
+    padding-left:
+        12px;
+}
+
+
+.history-item:last-child {
+
+    margin-bottom:
+        0;
+}
+
+
+/* ========================================
+   HISTORY ポイント
+======================================== */
+
+.history-item::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        -28px;
+
+    top:
+        8px;
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #b99a91;
+
+    border:
+        3px solid #fffdfb;
+
+    box-sizing:
+        content-box;
+}
+
+
+/* ========================================
+   HISTORY 年代タイトル
+======================================== */
+
+.history-item h4 {
+
+    margin-bottom:
+        8px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        17px;
+
+    font-weight:
+        normal;
+
+    color:
+        #554d49;
+}
+
+
+/* ========================================
+   HISTORY 本文
+======================================== */
+
+.history-item p {
+
+    font-size:
+        14px;
+
+    line-height:
+        2.1;
+
+    color:
+        #756c67;
+}
+
+
+/* ========================================
+   PARTNER
+======================================== */
+
+.partner-title {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        22px;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        20px;
+
+    font-weight:
+        normal;
+
+    color:
+        #554d49;
+}
+
+
+.partner-text {
+
+    max-width:
+        540px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        14px;
+
+    line-height:
+        2.3;
+
+    color:
+        #756c67;
+
+    text-align:
+        left;
+}
+
+
+/* ========================================
+   PC表示
+======================================== */
+
+@media (min-width: 701px) {
+
+    .person-section {
+
+        padding:
+            45px 50px 50px;
+
+        margin-top:
+            70px;
+    }
+
+
+    .profile-list li {
+
+        font-size:
+            15px;
+    }
+
+
+    .profile-list li span {
+
+        font-size:
+            15px;
+
+        width:
+            110px;
+    }
+
+
+    .history-item h4 {
+
+        font-size:
+            18px;
+    }
+
+
+    .history-item p,
+    .partner-text {
+
+        font-size:
+            15px;
+    }
+
+}
+
+
+/* ========================================
+   小さいスマホ
+======================================== */
+
+@media (max-width: 380px) {
+
+    .person-section {
+
+        margin-top:
+            45px;
+
+        padding:
+            28px 18px 32px;
+    }
+
+
+    .person-section-title {
+
+        margin-bottom:
+            25px;
+
+        font-size:
+            11px;
+    }
+
+
+    .profile-list li {
+
+        font-size:
+            13px;
+
+        padding:
+            11px 3px;
+    }
+
+
+    .profile-list li span {
+
+        width:
+            75px;
+
+        font-size:
+            13px;
+    }
+
+
+    .history {
+
+        padding-left:
+            24px;
+    }
+
+
+    .history-item {
+
+        padding-left:
+            8px;
+
+        margin-bottom:
+            30px;
+    }
+
+
+    .history-item h4 {
+
+        font-size:
+            16px;
+    }
+
+
+    .history-item p {
+
+        font-size:
+            13px;
+
+        line-height:
+            2;
+    }
+
+
+    .partner-title {
+
+        font-size:
+            18px;
+    }
+
+
+    .partner-text {
+
+        font-size:
+            13px;
+
+        line-height:
+            2.1;
+    }
+
+}
