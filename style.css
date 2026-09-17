@@ -496,6 +496,29 @@ body {
         50px;
 }
 
+.section-inner > p {
+
+    text-align:
+        center;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size:
+        15px;
+
+    font-weight:
+        normal;
+
+    color:
+        #4a4441;
+
+    margin-bottom:
+        50px;
+}
+
 
 /* ========================================
    Bride / Groom
@@ -963,6 +986,9 @@ body {
 
     text-align:
         left;
+
+    white-space:
+        pre-line;    
 }
 
 
@@ -1744,6 +1770,9 @@ footer p + p {
         left;
 }
 
+.george-photo {
+    max-width: 250px;
+}
 
 /* ========================================
    PC表示
