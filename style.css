@@ -678,29 +678,36 @@ body {
     max-width:
         600px;
 
+    height:
+        400px;
+
     margin:
         0 auto 20px;
 
     display:
-        block;
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    background:
+        #f5f1ee;
+
+    overflow:
+        hidden;
 }
 
 
 .family-photo img {
-
-    width:
-        100%;
-
-    height:
-        auto;
-
-    display:
-        block;
-
-    object-fit:
-        contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
 }
-
 
 .family-section p {
 
@@ -715,6 +722,10 @@ body {
 
     color:
         #756c67;
+}
+
+.banio-photo img {
+    object-position: center 50%;
 }
 
 
@@ -1770,9 +1781,7 @@ footer p + p {
         left;
 }
 
-.george-photo {
-    max-width: 250px;
-}
+
 
 /* ========================================
    PC表示
